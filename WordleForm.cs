@@ -228,7 +228,7 @@ namespace WordleResolver
         private void Form1_Load_1(object sender, EventArgs e)
         {
             Global.filtrado = Global.words;
-            bsc_label.Text = "By BSC (2.0.3)";
+            BscMenu.Text = "By BSC (2.1.3)";
             Tudo();
         }
 
@@ -248,6 +248,75 @@ namespace WordleResolver
             Global.busca = ".....";
             Limpar_tudo();
             Tudo();
+        }
+
+        private void BscMenu_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/brunobsc/WordleResolverCSharp/";
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+        }
+
+        private void DarkTheme()
+        {
+            var CorTexto = Color.White;
+            var CorFundo = Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(36)))), ((int)(((byte)(36)))));
+            var CorBotao = Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            var CorTextBox = Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+
+            ThemeLoad(CorTexto, CorFundo, CorBotao, CorTextBox);
+
+        }
+
+        private void LightTheme()
+        {
+            var CorTexto = Color.Black;
+            var CorFundo = Color.White;
+            var CorBotao = SystemColors.Control;
+            var CorTextBox = SystemColors.Window;
+
+            ThemeLoad(CorTexto, CorFundo, CorBotao, CorTextBox);
+
+        }
+
+        private void ThemeLoad(Color CorTexto, Color CorFundo, Color CorBotao, Color CorTextBox) {
+
+            //Label
+            this.lugarerrado_label.ForeColor = CorTexto;
+            this.naotem_label.ForeColor = CorTexto;
+            this.titulo_label.ForeColor = CorTexto;
+            this.label4.ForeColor = CorTexto;
+            //this.sugestao_label.ForeColor = CorTexto;
+            this.label2.ForeColor = CorTexto;
+            this.possiveis_label.ForeColor = CorTexto;
+            this.correto_label.ForeColor = CorTexto;
+
+            //Background
+            this.BackColor = CorFundo;
+
+            //Button
+            this.filtrar_botao.BackColor = CorBotao;
+            this.limparerrada_botao.BackColor = CorBotao;
+            this.sugerir_botao.BackColor = CorBotao;
+            this.filtrar_botao.ForeColor = CorTexto;
+            this.limparerrada_botao.ForeColor = CorTexto;
+            this.sugerir_botao.ForeColor = CorTexto;
+            this.resetButton.BackColor = CorBotao;
+            this.resetButton.ForeColor = CorTexto;
+
+            //TextBox
+            this.naotem_coluna.BackColor = CorTextBox;
+            this.naotem_coluna.ForeColor = CorTexto;
+
+        }
+
+        private void darkThemeButton_Click(object sender, EventArgs e)
+        {
+            DarkTheme();
+        }
+
+        private void lightThemeButton_Click(object sender, EventArgs e)
+        {
+            LightTheme();
         }
     }
 }
