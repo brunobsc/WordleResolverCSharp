@@ -1,6 +1,6 @@
 ﻿namespace WordleResolver
 {
-    partial class Form1
+    partial class WordleForm
     {
         /// <summary>
         ///  Required designer variable.

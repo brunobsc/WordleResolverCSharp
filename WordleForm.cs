@@ -2,9 +2,9 @@ using System.Text.RegularExpressions;
 
 namespace WordleResolver
 {
-    public partial class Form1 : Form
+    public partial class WordleForm : Form
     {
-        public Form1()
+        public WordleForm()
         {
             InitializeComponent();
         }
