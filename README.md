@@ -3,7 +3,7 @@
 ![wordleResolverWindow](https://user-images.githubusercontent.com/18382186/164861439-d7ba0e72-ebb3-4ddb-a67c-50adb99c3892.png)
 
 ### Requiments
-> .Net Core Runtime  
+> .Net 6 Desktop Runtime  
 > Link to Download: https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-6.0.4-windows-x64-installer
 
 ### Download WordleResolver  
